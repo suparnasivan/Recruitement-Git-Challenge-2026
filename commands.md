@@ -28,6 +28,12 @@ git merge Suparna
 git reset --soft HEAD~1
 - used this to undo the favourite dish commit. soft reset means it removes the commit from history but keeps the file and the changes staged, nothing actually got deleted
 
+git rm favourite_dish.txt
+- the reset left the file just sitting there staged, it didnt delete it. so i had to remove it myself with this command
+
+git commit -m "Remove favourite dish file"
+- committed that removal so the file would actually be gone, since reset --soft alone doesnt delete anything from my machine
+
 git log --oneline
 - checked this after the reset to confirm the commit was actually gone from history
 
